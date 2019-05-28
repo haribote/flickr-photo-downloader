@@ -1,10 +1,12 @@
 import axios from "axios";
-import { API_KEY, API_PATH } from "../constants.mjs";
+import { API_PATH } from "../constants.mjs";
+
+const { FLICKR_API_KEY } = process.env;
 
 const client = axios.create({
   baseURL: API_PATH,
   params: {
-    api_key: API_KEY,
+    api_key: FLICKR_API_KEY,
     format: "json",
     nojsoncallback: 1
   }
